@@ -4,7 +4,7 @@ export function createCommentBody(commentData) {
     let commentBody = document.createElement('div');
     commentBody.className = 'comment-body';
 
-    let commentBodyData = document.createElement('div');;
+    let commentBodyData = document.createElement('div');
     commentBodyData.classList.add('comment-body__data', 'data');
     commentBodyData.innerHTML = `
         <div class="data__username">${commentData.name}</div>

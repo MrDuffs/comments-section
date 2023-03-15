@@ -15,10 +15,12 @@ export function getFormattedTime(time) {
     let min = (date.getMinutes().toString().length < 2) ? '0' + date.getMinutes() : date.getMinutes();
 
     if (currentDate.getDate() === day) {
-        return formattedTime += `Сегодня, ${hour}:${min}`;
+        formattedTime += `Сегодня, ${hour}:${min}`;
     } else if (currentDate.getDate() - 1 === day) {
-        return formattedTime += `Вчера, ${hour}:${min}`;
+        formattedTime += `Вчера, ${hour}:${min}`;
     } else {
-        return formattedTime = `${day} ${month} ${year}, ${hour}:${min}`;
+        formattedTime = `${day} ${month} ${year}, ${hour}:${min}`;
     }
+
+    return formattedTime;
 }
