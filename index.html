@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/comment.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.scss"/>
+    <title>Comments Section</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="main">
+        <section class="comment-writing">
+          <div class="comment-writing__container">
+            <div class="title">
+              Введите комментарий
+              <span class="title__warning">
+                Поля со знаком <span class="validation-sign">*</span> обязательны для заполнения!
+              </span>
+            </div>
+            <form class="comment-form">
+              <div class="comment-form__data">
+                <div class="input-wrapper">
+                  <input
+                          data-required="true"
+                          name="username"
+                          type="text"
+                          class="comment-form__username"
+                          placeholder="Имя"
+                          maxlength="20"
+                  >
+                  <span class="validation-sign">*</span>
+                </div>
+                <div class="input-wrapper">
+                  <input
+                          name="date"
+                          type="date"
+                          class="comment-form__date"
+                          placeholder="Введите дату"
+                  >
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <textarea
+                        data-required="true"
+                        class="comment-form__comment-area"
+                        name="comment-area"
+                        cols="30"
+                        rows="5"
+                        placeholder="Написать комментарий..."
+                ></textarea>
+                <span class="validation-sign">*</span>
+              </div>
+              <button class="button">Отправить</button>
+            </form>
+          </div>
+        </section>
+        <section class="comments-section">
+          <div class="comments-section__container">
+            <div class="title">Комментарии</div>
+            <div class="comments-section__content"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="src/js/main.js"></script>
+  </body>
+</html>

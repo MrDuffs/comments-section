@@ -1,0 +1,132 @@
+.comments-section__container {
+  width: 768px;
+  min-height: 365px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: white;
+  border: 1px solid #bdd6fa;
+  border-radius: 10px;
+}
+
+.comments-section__content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  &.content_empty {
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+
+    .comments-section__empty {
+      height: 50%;
+      width: 100%;
+      color: white;
+      background: #5457b6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+  }
+}
+
+.comment-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid #dbdfe4;
+  border-radius: 10px;
+
+  .comment-body__text {
+    line-height: 130%;
+    word-wrap: break-word;
+  }
+}
+
+.data {
+  &__username {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  &__comment-date {
+    color: #595959;
+    font-size: 14px;
+    font-style: italic;
+  }
+}
+
+.comment-body__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like-button {
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  display: inline-flex;
+  transition: all 0.1s ease;
+
+  svg {
+    position: relative;
+    top: 4.5px;
+    left: 3.5px;
+  }
+
+  &:hover {
+    background: rgba(255, 185, 185, 0.5);
+    border-radius: 50%;
+
+    & svg path {
+      stroke: #ff6767;
+    }
+  }
+
+  &:active {
+    transform: scale(1.2);
+  }
+}
+
+.like-button.liked {
+  & svg path {
+    fill: #ff6767;
+    stroke: #ff6767;
+  }
+}
+
+.delete-button {
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  display: inline-flex;
+  transition: all 0.1s ease;
+
+  svg {
+    position: relative;
+    top: 4px;
+    left: 3px;
+  }
+
+  &:hover {
+    background: rgba(224, 224, 224, 0.5);
+    border-radius: 50%;
+
+    & svg path {
+      stroke: #ff2727;
+    }
+  }
+
+  &:active {
+    transform: scale(1.2);
+  }
+}
+
